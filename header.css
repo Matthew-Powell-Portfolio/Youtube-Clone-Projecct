@@ -1,0 +1,137 @@
+.header {
+  height: 55px;
+
+  display: flex;
+  flex-direction: row;
+  /*horizontal layout*/
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: white;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  z-index: 100;
+}
+
+.left-section {
+  /*display: flex; because the div is a child of flexbox so the things  left-section is a child*/
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.youtube-logo {
+  height: 20px;
+}
+
+.middle-section {
+  flex: 1;
+  max-width: 500px;
+  /*it won't get bigger than 500px*/
+  margin-left: 75px;
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  border-radius: 2px;
+  /*inset to get shadow inside of the content value*/
+  /*horizontal vertical burr*/
+  /*box-shadow: inset 1px 2px 5px rgba(0,0,0,0.3);*/
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  /*remove default width so it can shrink*/
+  width: 0;
+}
+
+/*select the placeholder*/
+
+.search-bar::placeholder {
+  font-family: Roboto, Arial;
+  font-size: 16px;
+}
+
+.search-button {
+  height: 39px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  /*margin -1 pull in the content*/
+  margin-left: -1px;
+  margin-right: 10px;
+}
+
+.search-icon {
+  width: 25px;
+  margin-top: 4px;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(248, 248, 248);
+}
+
+.voice-search-icon {
+  height: 24px;
+  margin-top: 4px;
+}
+
+.right-section {
+  /*less width because of spacing*/
+  width: 180px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*stops the content from shriking*/
+  flex-shrink: 0;
+}
+
+.upload-icon,
+.youtube-apps-icon,
+.notification-icon {
+  height: 24px;
+}
+
+.notification-icon-container {
+  position: relative;
+}
+
+.notification-count {
+  background-color: rgb(200, 0, 0);
+  color: white;
+  font-size: 11px;
+
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.current-user-profile {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  object-fit: cover;
+}
